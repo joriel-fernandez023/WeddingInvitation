@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Pinyon+Script&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #fff6e9;
+  background: #351829;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.invitation-page {
+  background:
+    radial-gradient(ellipse at 14% 8%, #70323d 0, transparent 40%),
+    linear-gradient(165deg, #511f2b, #351829 55%, #281727);
+}
+
+.inv-section {
+  width: min(81%, 1120px);
+  margin-inline: auto;
+  padding-top: clamp(3.5rem, 7vw, 7rem);
+}
+
+.inv-section-title {
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+  color: #fff4df;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.inv-section-title::after {
+  display: block;
+  width: 2.75rem;
+  height: 1px;
+  margin: 0.85rem auto 0;
+  background: #c7a773;
+  content: '';
+}
+
+.inv-card {
+  border-radius: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(1.5rem, 4vw, 4rem);
+  background: linear-gradient(155deg, #fffaf0, #f3e6cf);
+  color: #58222b;
+  text-align: center;
+}
+
+.inv-card + .inv-card {
+  margin-top: clamp(0.8rem, 1.8vw, 1.5rem);
+}
+
+.inv-script {
+  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.inv-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.65rem, 3.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.inv-copy {
+  max-width: 64ch;
+  margin-inline: auto;
+  font-size: clamp(1rem, 1.55vw, 1.35rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.inv-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.55rem 1.7rem;
+  background: #601b2b;
+  color: white;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inv-button:hover {
+  background: #77283a;
+}
+
+.inv-button:focus-visible {
+  outline: 2px solid #ad8247;
+  outline-offset: 4px;
+}
+
+@keyframes wedding-heart {
+  from {
+    opacity: 0;
+    translate: 0 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    translate: var(--drift) -3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .inv-section {
+    width: 92%;
+  }
+
+  .inv-card {
+    padding-inline: 1rem;
+  }
+}
